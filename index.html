@@ -4,103 +4,227 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
+  <title>Pokémon Bento</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <style>
+    body {
+      background-color: #14161f;
+    }
+
     .card {
       min-height: 100px;
       background-color: gray;
+      border: 0;
+      border-radius: 1.25rem;
+      color: #fff;
+      justify-content: flex-end;
+      transition: transform .2s ease;
     }
+
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    .card .dex {
+      font-size: .7rem;
+      letter-spacing: .08em;
+      opacity: .8;
+    }
+
+    .card .icon {
+      flex: 1 1 0;
+      min-height: 100px;
+      width: 100%;
+      object-fit: contain;
+      margin-bottom: .25rem;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, .35));
+    }
+
+    .card h5 {
+      font-weight: 700;
+      margin: .25rem 0 0;
+    }
+
+    .card p {
+      font-size: .8rem;
+      margin: 0;
+      opacity: .92;
+    }
+
+    .card .tag {
+      display: inline-block;
+      font-size: .65rem;
+      font-weight: 600;
+      padding: .1rem .5rem;
+      margin-bottom: .35rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .25);
+      align-self: flex-start;
+    }
+
+    .card.feature .icon {
+      min-height: 220px;
+    }
+
+    .card.feature h5 {
+      font-size: 2rem;
+    }
+
+    .card.feature p {
+      font-size: 1rem;
+    }
+
+    .grass { background: linear-gradient(145deg, #4caf50, #2e7d32); }
+    .fire { background: linear-gradient(145deg, #ff7043, #d84315); }
+    .water { background: linear-gradient(145deg, #42a5f5, #1565c0); }
+    .normal { background: linear-gradient(145deg, #bcaaa4, #795548); }
+    .fairy { background: linear-gradient(145deg, #f48fb1, #c2185b); }
+    .ghost { background: linear-gradient(145deg, #7e57c2, #4527a0); }
+    .electric { background: linear-gradient(145deg, #fdd835, #f9a825); color: #3a2c00 !important; }
+    .fighting { background: linear-gradient(145deg, #5c6bc0, #283593); }
+    .psychic { background: linear-gradient(145deg, #ec407a, #ad1457); }
+    .steel { background: linear-gradient(145deg, #78909c, #37474f); }
   </style>
 </head>
 
 <body>
   <div class="container-fluid p-3">
     <div class="row">
-      <div class="col-2 p-1">
-        <div class="card p-1">
-
-        </div>
-      </div>
-      <div class="col-2 p-1">
-        <div class="card p-1">
-
-        </div>
-      </div>
-      <div class="col-2 p-1">
-        <div class="card p-1">
-
-        </div>
-      </div>
-      <div class="col-3 p-1">
-        <div class="card p-1">
-
-        </div>
-      </div>
-      <div class="col-3 p-1">
-        <div class="card p-1">
-
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-4">
+      <div class="col-3">
         <div class="row">
           <div class="col-12 p-1">
-            <div class="card p-1">
-
-            </div>
+<div class="card p-1 grass">
+          <span class="dex">#001</span>
+          <img class="icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="Bulbasaur">
+          <h5>Bulbasaur</h5>
+          <p>Carries a seed on its back that grows with it.</p>
+        </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-6 p-1">
-            <div class="card p-1">
-
-            </div>
-          </div>
-          <div class="col-6 p-1">
-            <div class="card p-1">
-
-            </div>
+          <div class="col-12 p-1">
+<div class="card p-1 fire">
+          <span class="dex">#004</span>
+          <img class="icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png" alt="Charmander">
+          <h5>Charmander</h5>
+          <p>The flame on its tail shows its mood.</p>
+        </div>
           </div>
         </div>
       </div>
-      <div class="col-5 p-1">
-        <div class="card p-1 h-100">
-
+      <div class="col-6 p-1">
+<div class="card p-1 h-100 feature electric">
+          <span class="dex">#025</span>
+          <span class="tag">ELECTRIC</span>
+          <img class="icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu">
+          <h5>Pikachu</h5>
+          <p>The iconic Electric-type mouse. It stores power in its cheeks and releases it when threatened. Loyal, brave, and the face of the whole franchise.</p>
         </div>
       </div>
       <div class="col-3">
-        <div class="row h-100">
-          <div class="col-6 p-1">
-            <div class="card p-1 h-100">
-
-            </div>
+        <div class="row">
+          <div class="col-12 p-1">
+<div class="card p-1 water">
+          <span class="dex">#007</span>
+          <img class="icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png" alt="Squirtle">
+          <h5>Squirtle</h5>
+          <p>Hides in its shell and sprays water.</p>
+        </div>
           </div>
-          <div class="col-6 p-1">
-            <div class="card p-1 h-100">
-
+        </div>
+        <div class="row">
+          <div class="col-12 p-1">
+<div class="card p-1 water">
+              <span class="dex">#130</span>
+              <img class="icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/130.png" alt="Gyarados">
+              <h5>Gyarados</h5>
+              <p>Furious sea serpent born from a weak Magikarp.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-4 p-1">
-        <div class="card p-1">
-
-        </div>
+      <div class="col-3 p-1">
+<div class="card p-1 h-100 fighting">
+              <span class="dex">#448</span>
+              <img class="icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png" alt="Lucario">
+              <h5>Lucario</h5>
+              <p>Reads and controls aura.</p>
+            </div>
       </div>
-      <div class="col-5 p-1">
-        <div class="card p-1">
-
+      <div class="col-6">
+        <div class="row">
+          <div class="col-6 p-1">
+<div class="card p-1 psychic">
+          <span class="dex">#151</span>
+          <img class="icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png" alt="Mew">
+          <h5>Mew</h5>
+          <p>Said to hold the DNA of every Pokémon.</p>
+        </div>
+          </div>
+          <div class="col-6 p-1">
+<div class="card p-1 steel">
+          <span class="dex">#150</span>
+          <img class="icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" alt="Mewtwo">
+          <h5>Mewtwo</h5>
+          <p>A powerful Psychic-type created through genetic engineering.</p>
+        </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 p-1">
+<div class="card p-1 fairy">
+          <span class="dex">#282</span>
+          <img class="icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/282.png" alt="Gardevoir">
+          <h5>Gardevoir</h5>
+          <p>Will protect its Trainer with everything it has, even bending space itself.</p>
+        </div>
+          </div>
         </div>
       </div>
       <div class="col-3 p-1">
-        <div class="card p-1">
-
+<div class="card p-1 h-100 ghost">
+              <span class="dex">#094</span>
+              <img class="icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png" alt="Gengar">
+              <h5>Gengar</h5>
+              <p>Lurks in shadows and loves a good prank.</p>
+            </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 p-1">
+<div class="card p-1 normal">
+          <span class="dex">#133</span>
+          <img class="icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png" alt="Eevee">
+          <h5>Eevee</h5>
+          <p>Unstable genes let it evolve into many different forms.</p>
         </div>
+      </div>
+      <div class="col-4 p-1">
+<div class="card p-1 fairy">
+          <span class="dex">#039</span>
+          <img class="icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png" alt="Jigglypuff">
+          <h5>Jigglypuff</h5>
+          <p>Sings a lullaby that puts everyone to sleep.</p>
+        </div>
+      </div>
+      <div class="col-4 p-1">
+<div class="card p-1 water">
+              <span class="dex">#054</span>
+              <img class="icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/54.png" alt="Psyduck">
+              <h5>Psyduck</h5>
+              <p>Always has a headache, until it doesn't.</p>
+            </div>
+      </div>
+      <div class="col-2 p-1">
+<div class="card p-1 normal">
+              <span class="dex">#143</span>
+              <img class="icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png" alt="Snorlax">
+              <h5>Snorlax</h5>
+              <p>Eats, then sleeps. Repeat.</p>
+            </div>
       </div>
     </div>
   </div>
